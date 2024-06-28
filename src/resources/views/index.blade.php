@@ -14,6 +14,70 @@
             <a href="/" class="header__logo">Contact Form</a>
         </div>
     </header>
-
+    <main>
+        <div class="contact-form__content">
+            <div class="contact-form__heading">
+                <h2>お問い合わせ</h2>
+            </div>
+            <form action="" method="post" class="form">
+                @csrf
+                <div class="form__group">
+                    <div class="form__group-title">
+                        <span class="form__label--item">お名前</span>
+                        <span class="form__label--required">必須</span>
+                    </div>
+                    <div class="form__group-content">
+                        <div class="form__input--text">
+                            <input type="text" name="name" placeholder="テスト太郎">
+                        </div>
+                        <div class="form__error">
+                            バリデーション
+                        </div>
+                    </div>
+                </div>
+                <div class="form__group">
+                    <div class="form__group-title">
+                        <span class="form__label--item">メールアドレス</span>
+                        <span class="form__label--required">必須</span>
+                    </div>
+                    <div class="form__group-content">
+                        <div class="form__input--text">
+                            <input type="email" name="email" placeholder="test@example.com">
+                        </div>
+                        <div class="form__error">
+                            バリデーション
+                        </div>
+                    </div>
+                </div>
+                <div class="form__group">
+                    <div class="form__group-title">
+                        <span class="form__label--item">電話番号</span>
+                        <span class="form__label--required">必須</span>
+                    </div>
+                    <div class="form__group-content">
+                        <div class="form__input--text">
+                            <input type="tel" name="tel" placeholder="09012345678">
+                        </div>
+                        <div class="form__error">
+                            バリデーション
+                        </div>
+                    </div>
+                </div>
+                <div class="form__group">
+                    <div class="form__group-title">
+                        <span class="form__label--item">お問い合わせ内容</span>
+                    </div>
+                    <div class="form__group-content">
+                        <div class="form__input--textarea">
+                            <textarea name="content" id="" placeholder="資料をいただきたいです"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="form__button">
+                    <input class="form__button-submit" type="submit" value="送信">
+                </div>
+            </form>
+        </div>
+    </main>
 </body>
 </html>
